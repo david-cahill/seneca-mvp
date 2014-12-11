@@ -22,13 +22,15 @@
     "seneca-project": "~0.1.4",
     "express": "^4.0.0",
     "seneca-admin": "~0.1.4",
-    "seneca": "~0.5.20",
+    "seneca": "git://github.com/rjrodger/seneca.git#0.6.0",
     "seneca-data-editor": "~0.1.6",
     "seneca-mail": "~0.1.4",
     "seneca-auth": "~0.3.0",
     "cookie-parser": "^1.0.1",
     "body-parser": "^1.0.1",
-    "express-session": "^1.0.2"
+    "express-session": "^1.0.2",
+    "nodemailer-smtp-transport": "0.1.13",
+    "seneca-msgstats":"~0.1.2"
   },
   "devDependencies": {
     "chai": "~1.9.1"

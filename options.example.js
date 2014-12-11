@@ -23,6 +23,18 @@ module.exports = {
     }
   },
 
+  msgstats: {
+    pin:{},
+    influxOpts:{
+      host:'localhost',
+      port: 8086,
+      username:'root',
+      password:'root',
+      database:'test_db2',
+      seriesName:'mvp_test'
+    }
+  },
+
   settings: {
     spec: {
       a:{"type":"text", "nice":"A", "help":"Example of text."},

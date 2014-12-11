@@ -35,6 +35,7 @@ seneca.use('account')
 seneca.use('project')
 seneca.use('settings')
 seneca.use('data-editor')
+seneca.use('msgstats')
 
 
 
