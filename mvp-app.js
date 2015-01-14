@@ -9,8 +9,7 @@ var express = require('express')
 var cookieparser = require('cookie-parser')
 var bodyparser   = require('body-parser')
 var session      = require('express-session')
-
-
+//var msgstats     = require('seneca-msgstats');
 var seneca = require('seneca')()
 
 
@@ -27,7 +26,6 @@ seneca.use('options','options.mine.js')
 
 
 seneca.use('mem-store',{web:{dump:true}})
-
 seneca.use('user',{confirm:true})
 seneca.use('mail')
 seneca.use('auth')
@@ -35,15 +33,13 @@ seneca.use('account')
 seneca.use('project')
 seneca.use('settings')
 seneca.use('data-editor')
-
-
+seneca.use('msgstats');
 
 seneca.ready(function(err){
   if( err ) return process.exit( !console.error(err) );
 
   var options = seneca.export('options')
   //console.log(options.main)
-
   var u = seneca.pin({role:'user',cmd:'*'})
   var projectpin = seneca.pin({role:'project',cmd:'*'})
 
